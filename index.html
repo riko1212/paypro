@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>form</title>
+    <link href="./css/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="violet"></div>
+      <div class="yellow"></div>
+      <div class="modal">
+        <h2 class="modal-title">Email verification</h2>
+        <p class="modal-text">
+          Let’s get started with this simple verification.
+        </p>
+        <form class="modal-form">
+          <div class="modal-field">
+            <label class="modal-label" for="user-email"
+              >Email verification</label
+            >
+            <input
+              class="modal-input"
+              id="user-email"
+              name="user-email"
+              type="email"
+              placeholder="example@mail.com"
+            />
+            <div class="error-block">
+              <svg class="error-icon">
+                <use href="./icons/icons.svg#icon-error"></use>
+              </svg>
+              <p class="error-text">Error text</p>
+            </div>
+          </div>
+          <div class="modal-field">
+            <label class="modal-label" for="user-url">Verification URL</label>
+            <input
+              class="modal-input"
+              id="user-url"
+              name="user-url"
+              type="url"
+              placeholder="https://"
+            />
+            <div class="error-block">
+              <svg class="error-icon">
+                <use href="./icons/icons.svg#icon-error"></use>
+              </svg>
+              <p class="error-text">Error text</p>
+            </div>
+          </div>
+
+          <button class="modal-send-btn" type="submit" disabled>
+            Move forward
+          </button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
