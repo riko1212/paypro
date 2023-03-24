@@ -112,6 +112,7 @@ button {
   font-size: 14px;
   line-height: 1.21;
   color: #373747;
+  outline: transparent;
 }
 
 .modal-input:focus {
@@ -144,15 +145,19 @@ button {
   background-color: #2774e6;
 }
 
-.modal-send-btn:hover {
+.modal-send-btn:not(:disabled):hover {
   background-color: #3980ea;
 }
 
-.modal-send-btn:focus {
+.modal-send-btn:not(:disabled):focus {
   background-color: #3980ea;
 }
 
 .hide {
+  display: none;
+}
+
+.error-block.hide {
   display: none;
 }
 
