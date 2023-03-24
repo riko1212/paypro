@@ -56,11 +56,19 @@ const handleSubmitForm = (e) => {
     .then((response) => {
       if (response.ok) {
         window.location.href = 'https://payproglobal.com';
+        e.target.form.reset();
+        modalFormEmail.setCustomValidity('');
+        modalFormUrl.setCustomValidity('');
+        modalFormBtn.disabled = true;
       } else {
         throw new Error('Bad response');
       }
     })
-    .catch((error) => console.error('Error:', error));
+    .catch((error) => {
+      console.error('Error:', error);
+      modalFormBtn.disabled = true;
+    });
+  modalForm.reset();
 };
 
 modalFormInputs.forEach((el) => {
